@@ -14,7 +14,9 @@
 #  database: db/development.sqlite3
 
  development:
-  url: postgresql://localhost:5432/dev_app?pool=5
+  adapter: postgresql
+  database: dev_app
+  pool: 5
   username: devappdb
   password: 123456
 
