@@ -1,0 +1,8 @@
+class LinksEquipment < ActiveRecord::Migration
+  def change
+    create_table :links_equipment, :id => false do |t|
+      t.belongs_to :equipment
+      t.belongs_to :link
+    end
+  end
+end

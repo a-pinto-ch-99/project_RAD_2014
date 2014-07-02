@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702085907) do
+ActiveRecord::Schema.define(version: 20140702103857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,11 @@ ActiveRecord::Schema.define(version: 20140702085907) do
     t.text     "link_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "links_equipment", id: false, force: true do |t|
+    t.integer "equipment_id"
+    t.integer "link_id"
   end
 
   create_table "users", force: true do |t|
