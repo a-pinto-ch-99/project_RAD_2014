@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140702103857) do
+ActiveRecord::Schema.define(version: 20140702113928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
     t.text     "cat_name"
-    t.text     "cat_descripiton"
+    t.text     "cat_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,16 +36,16 @@ ActiveRecord::Schema.define(version: 20140702103857) do
     t.datetime "updated_at"
   end
 
+  create_table "equipment_links", id: false, force: true do |t|
+    t.integer "equipment_id"
+    t.integer "link_id"
+  end
+
   create_table "links", force: true do |t|
     t.text     "link_name"
     t.text     "link_url"
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "links_equipment", id: false, force: true do |t|
-    t.integer "equipment_id"
-    t.integer "link_id"
   end
 
   create_table "users", force: true do |t|

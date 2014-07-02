@@ -1,0 +1,4 @@
+class EquipmentLinks < ActiveRecord::Migration
+  def change
+  end
+end
