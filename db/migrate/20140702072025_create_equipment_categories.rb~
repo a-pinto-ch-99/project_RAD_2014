@@ -1,0 +1,9 @@
+class CreateEquipmentCategories < ActiveRecord::Migration
+  def change
+    create_table :equipment_categories, :id => false do |t|
+
+      t.belongs_to :equipment
+      t.belongs_to :category
+    end
+  end
+end

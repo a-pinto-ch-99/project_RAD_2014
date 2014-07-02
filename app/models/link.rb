@@ -1,4 +1,3 @@
 class Link < ActiveRecord::Base
-  has_many :equip_links
-  has_many :equipments, thourgh: :equip_links 
+  has_and_belongs_to_many :equipment
 end

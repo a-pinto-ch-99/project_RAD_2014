@@ -1,0 +1,6 @@
+class CreateCategorieEquipment < ActiveRecord::Migration
+  def change
+    create_table :categorie_equipments do |t|
+    end
+  end
+end

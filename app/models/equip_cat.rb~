@@ -1,4 +1,4 @@
 class EquipCat < ActiveRecord::Base
-belongs_to :equipments
+belongs_to :equipment
 belongs_to :categories
 end

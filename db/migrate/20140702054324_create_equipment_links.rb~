@@ -1,0 +1,8 @@
+class CreateEquipmentLinks < ActiveRecord::Migration
+  def change
+    create_table :equipment_links do |t|
+
+      t.timestamps
+    end
+  end
+end
